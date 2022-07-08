@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        定义一个bean
+        id：bean的唯一标识，可以通过这个标识从容器中获取这个bean对象
+        class：这个bean的类型，完整类名称
+    -->
+    <!--<bean id="helloWorld" class="com.xavier.demo01.HelloWorld"/>
+
+    <bean id="hello1" class="com.xavier.demo01.HelloWorld"/>
+    <bean name="hello2" class="com.xavier.demo01.HelloWorld"/>
+    <bean id="hello3" name="hello_3" class="com.xavier.demo01.HelloWorld"/>
+    <bean id="hello4" name="hello4_1,hello4_2,hello4_3" class="com.xavier.demo01.HelloWorld"/>
+    <bean name="hello5,hello5_1,hello5_2,hello5_3" class="com.xavier.demo01.HelloWorld"/>
+    <bean class="com.xavier.demo01.HelloWorld"/>
+    <bean class="com.xavier.demo01.HelloWorld"/>-->
+
+    <!--<bean id="constructor1" class="com.xavier.demo01.bean.User"/>
+    <bean id="constructor2" class="com.xavier.demo01.bean.User">
+        <constructor-arg index="0" value="All Arguments Constructor Methods!"/>
+        <constructor-arg index="1" value="25"/>
+    </bean>-->
+
+    <!--<bean id="createBeanByStaticFactoryMethod1" class="com.xavier.demo01.factory.UserStaticFactory" factory-method="userBuilder_1"/>
+
+    <bean id="createBeanByStaticFactoryMethod2" class="com.xavier.demo01.factory.UserStaticFactory" factory-method="userBuilder_2">
+        <constructor-arg index="0" value="Argument Constructor Method"/>
+        <constructor-arg index="1" value="25"/>
+    </bean>-->
+
+    <bean id="createBeanByFactoryBean" class="com.xavier.demo01.factory.UserFactoryBean"/>
+
+</beans>
