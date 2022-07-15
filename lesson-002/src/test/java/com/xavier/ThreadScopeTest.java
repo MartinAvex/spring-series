@@ -2,7 +2,6 @@ package com.xavier;
 
 import com.xavier.scope.ThreadScope;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.concurrent.TimeUnit;

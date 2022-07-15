@@ -19,7 +19,12 @@ public class ThreadScope implements Scope {
 
     public static final String THREAD_SCOPE = "thread";
 
-    private ThreadLocal<Map<String, Object>> beanMap = ThreadLocal.withInitial(HashMap::new);
+    private ThreadLocal<Map<String, Object>> beanMap = new ThreadLocal() {
+        @Override
+        protected Map<String, Integer> initialValue() {
+            return new HashMap<>();
+        }
+    };
 
     @Override
     public Object get(String beanName, ObjectFactory<?> objectFactory) {
