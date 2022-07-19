@@ -1,5 +1,8 @@
 package com.xavier.entity;
 
+import com.xavier.service.IServiceImpl_1;
+import com.xavier.service.IServiceImpl_2;
+import com.xavier.service.IServiceProxy;
 import com.xavier.utils.IoUtils;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -29,6 +32,14 @@ public class UserModelTest {
         /*Class.isAssignFrom()：判断两个类是否为父子关系*/
         boolean obj_str = Object.class.isAssignableFrom(String.class);
         System.out.println(obj_str);
+    }
+
+    @Test
+    public void proxy() {
+        IServiceProxy iServiceProxy = new IServiceProxy(new IServiceImpl_1());
+        iServiceProxy.method_1();
+        iServiceProxy.method_2();
+        iServiceProxy.method_3();
     }
 
 
