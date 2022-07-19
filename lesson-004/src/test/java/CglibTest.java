@@ -53,14 +53,5 @@ public class CglibTest {
 
     }
 
-    public int switchMethod(String str) {
-        switch (str) {
-            case "1":
-                System.out.println(str);
-            case "1":
-                return 2;
-        }
-    }
-
 
 }
